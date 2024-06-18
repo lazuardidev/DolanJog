@@ -59,6 +59,10 @@ const Rekomendasi = () => {
             
         })
         .then((response) =>{
+            console.log(response)
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
             return response.json();
         })
         .then((data) =>{
@@ -66,6 +70,7 @@ const Rekomendasi = () => {
             setLoading(false);
             setRecommendations(data)
         });
+        
         console.log("data yang diterima dari server")
         // console.log("jenis data:", typeof(inputs.waktu))
     };

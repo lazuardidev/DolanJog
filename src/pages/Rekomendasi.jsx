@@ -49,7 +49,7 @@ const Rekomendasi = () => {
         // })
         setLoading(true);
         console.log("Meminta request pada Backend .....")
-        fetch("/hasil", {
+        fetch("https://dolanjog.netlify.app/hasil", {
             method: "POST",
             cache: "no-cache",
             headers: {

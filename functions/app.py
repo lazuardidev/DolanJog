@@ -168,7 +168,7 @@ def get_recommendations(harga, fasilitas, deskripsi,waktu,kategori):
         recommendations.append({'Place_Name': place_name, 'Kategori': place_kategori, 'Cosine_Similarity': cosine_similarity,'Place_ID': Place_ID })
     return recommendations
 
-@app.route('/hasil', methods=['POST'])
+@app.route('https://dolanjog.netlify.app/hasil', methods=['POST'])
 def hasil():
     # recommendations = []
     if request.method == 'POST':
